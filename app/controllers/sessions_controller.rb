@@ -8,6 +8,6 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-  	redirect_to new_session_path
+  	redirect_to login_url
   end
 end

@@ -51,6 +51,7 @@ test:
   pool: 5
   username: cristinadumbrique
   password: enddynayn
+  host: localhost
 
 production:
   adapter: postgresql

@@ -23,13 +23,15 @@ group :development, :test do
 	gem 'fuubar'
 	gem 'growl'
 	gem 'ruby_gntp'
+ 
 end
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
-gem 'compass-rails'
+
 gem 'zurb-foundation', '~> 4.0.0'
+gem "compass-rails", github: "milgner/compass-rails", ref: "1749c06f15dc4b058427e7969810457213647fb8"
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -48,8 +50,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+ #Use ActiveModel has_secure_password
+
+
+gem 'bcrypt-ruby', '~> 3.0.0', require: 'bcrypt'
 
 # Use unicorn as the app server
 # gem 'unicorn'
