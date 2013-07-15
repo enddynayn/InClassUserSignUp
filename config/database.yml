@@ -19,8 +19,9 @@ development:
   encoding: unicode
   database: InClassUserSignUp_development
   pool: 5
-  username: InClassUserSignUp
-  password:
+  host: localhost
+  username: cristinadumbrique
+  password: enddynayn
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -48,13 +49,13 @@ test:
   encoding: unicode
   database: InClassUserSignUp_test
   pool: 5
-  username: InClassUserSignUp
-  password:
+  username: cristinadumbrique
+  password: enddynayn
 
 production:
   adapter: postgresql
   encoding: unicode
   database: InClassUserSignUp_production
   pool: 5
-  username: InClassUserSignUp
-  password:
+  username: cristinadumbrique
+  password: enddynayn
