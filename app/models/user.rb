@@ -1,8 +1,6 @@
 class User < ActiveRecord::Base
 	before_save :encrypt_password
 
-	attr_accessor :password, :password_confirmation
-
 	validates :password, confirmation: true
 	validates :password_confirmation, presence: true
 
@@ -18,7 +16,22 @@ class User < ActiveRecord::Base
 		end
 			nil
 	end
+
+	def password
+		@password
+	end
+
+	def password=(new_pasword)
+		@password = new_pasword
+	end
 	
+	def password_confirmation
+		@password_confirmation
+	end
+
+	def password_confirmation=(new_pasword)
+		@password_confirmation = new_pasword
+	end
 
 	private
 
@@ -27,3 +40,14 @@ class User < ActiveRecord::Base
 		self.fish = BCrypt::Engine.hash_secret(password, self.salt)
 	end
 end
+
+
+
+
+# def salt
+# 	#get from db
+# end
+
+# def salt=(new_salt)
+# 	#save to db
+# end
