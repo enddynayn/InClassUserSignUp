@@ -10,11 +10,13 @@
 		<h1>Log in</h1>
 
 		<form action="/login" method="POST">
-			<p><input type="text" id="email" name="email" placeholder="Email address"></p>
+			<p><input type="text" id="email" class="large-4 columns" name="email" placeholder="Email address"></p>
 
-			<p><input type="password" name="password" id="password" placeholder="Password"></p>
-
+			<p><input type="password" name="password" class="large-4 columns" id="password" placeholder="Password"></p>
+			
+			<p><button id="toggle-password-field" class="small buttton">Show Password</button>
 			<p><input type="submit" value="Log in" class="small button"></p>
+
 
 		</form>  
 	</div>
