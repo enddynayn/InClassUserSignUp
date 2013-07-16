@@ -5,6 +5,22 @@ class User < ActiveRecord::Base
 
 	validates :password, confirmation: true
 	validates :password_confirmation, presence: true
+
+	def self.authenticate(email, password)
+		user = User.find_by(email: email)
+
+		if user
+			fish = BCrypt::Engine.hash_secret(password, user.salt)
+			if user.fish == fish
+				user 
+		
+			else
+			nil
+			end
+		else
+			nil
+		end
+	end
 	
 
 	private
