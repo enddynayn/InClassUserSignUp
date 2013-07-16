@@ -12,14 +12,11 @@ class User < ActiveRecord::Base
 		if user
 			fish = BCrypt::Engine.hash_secret(password, user.salt)
 			if user.fish == fish
-				user 
+				return user 
 		
-			else
-			nil
 			end
-		else
-			nil
 		end
+			nil
 	end
 	
 
